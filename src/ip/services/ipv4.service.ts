@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { Repository } from 'typeorm';
-import { AsnIpv4 } from '../entities/asn-ipv4.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CitiesIpv4 } from '../entities/city-ipv4.entity';
+import { Repository } from 'typeorm';
+import { CitiesIpv4 } from '../entities';
+import { AsnIpv4 } from '../entities/asn-ipv4.entity';
 
 @Injectable()
 export class Ipv4Service {

@@ -1,6 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Ip } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { titleApi } from './common/constants/common-api.constants';
+import * as ipaddr from 'ipaddr.js';
 
 @ApiTags('Elasticsearch Root')
 @Controller()
@@ -9,7 +9,7 @@ export class AppController {
   @ApiOperation({
     description: 'Some ELB use this endpoint for enable the instance',
   })
-  getRoot(): string {
-    return titleApi;
+  getRoot(@Ip() ipAddress) {
+    return ipaddr.process(ipAddress).toString();
   }
 }

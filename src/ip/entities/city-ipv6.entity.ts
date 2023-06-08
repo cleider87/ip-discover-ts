@@ -1,16 +1,16 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'cities_ipv4' })
-export class CitiesIpv4 {
+@Entity({ name: 'cities_ipv6' })
+export class CitiesIpv6 {
   //ip_range_start, ip_range_end, country_code, state1, state2, city, postcode, latitude, longitude, timezone
   @PrimaryGeneratedColumn({ type: 'bigint', unsigned: true })
   id: number;
 
   @Column({ type: 'inet', name: 'ip_range_start' })
-  ipRangeStart: number;
+  ipRangeStart: string;
 
   @Column({ type: 'inet', name: 'ip_range_end' })
-  ipRangeEnd: number;
+  ipRangeEnd: string;
 
   @Column({ type: 'varchar', length: 2, name: 'country_code' })
   countryCode: string;
