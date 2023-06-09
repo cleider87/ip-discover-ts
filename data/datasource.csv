@@ -1,0 +1,5 @@
+countries;country,latitude,longitude,name;https://github.com/google/dspl/raw/master/samples/google/canonical/countries.csv
+asn_ipv4;ip_range_start,ip_range_end,as_number,as_organization;https://github.com/sapics/ip-location-db/raw/master/dbip-asn/dbip-asn-ipv4.csv
+asn_ipv6;ip_range_start,ip_range_end,as_number,as_organization;https://github.com/sapics/ip-location-db/raw/master/dbip-asn/dbip-asn-ipv6.csv
+cities_ipv4;ip_range_start,ip_range_end,country_code,state1,state2,city,postcode,latitude,longitude,timezone;https://github.com/sapics/ip-location-db/raw/master/geolite2-city/geolite2-city-ipv4.csv.gz
+cities_ipv6;ip_range_start,ip_range_end,country_code,state1,state2,city,postcode,latitude,longitude,timezone;https://github.com/sapics/ip-location-db/raw/master/geolite2-city/geolite2-city-ipv6.csv.gz
