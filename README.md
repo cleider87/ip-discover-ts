@@ -23,6 +23,13 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
+
+## Populate or update database
+```sh
+$ cd data
+$ sh update.sh
+```
+
 ## Test
 
 ```bash
