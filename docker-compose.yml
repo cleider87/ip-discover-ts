@@ -4,8 +4,16 @@ services:
   jaeger:
     image: jaegertracing/all-in-one:latest
     ports:
-      - "16686:16686"
-      - "14268:14268"
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 5778:5778
+      - 16686:16686
+      - 4317:4317
+      - 4318:4318
+      - 14250:14250
+      - 14268:14268
+      - 14269:14269
+      - 9411:9411
     environment:
       - COLLECTOR_OTLP_ENABLED=true
       - LOG_LEVEL=debug
@@ -16,7 +24,7 @@ services:
     environment:
       POSTGRES_PASSWORD: administrator
     expose:
-        - "5432"
+      - "5432"
     ports:
-        - "5432:5432"
+      - "5432:5432"
     network_mode: bridge

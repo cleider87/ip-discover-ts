@@ -13,7 +13,7 @@ export class Ipv6Service {
     private citiesIpv6Repository: Repository<CitiesIpv6>,
   ) {}
 
-  async findASN(ipv6: string) {
+  async findASN(ipv6: string): Promise<AsnIpv6> {
     return this.asnIpv6Repository
       .createQueryBuilder('asn_ipv6')
       .select()
@@ -21,7 +21,7 @@ export class Ipv6Service {
       .getOne();
   }
 
-  async findCity(ipv6: string) {
+  async findCity(ipv6: string): Promise<CitiesIpv6> {
     return this.citiesIpv6Repository
       .createQueryBuilder('cities_ipv6')
       .select()
