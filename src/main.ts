@@ -13,10 +13,12 @@ import {
   version,
 } from './common/constants/common-api.constants';
 import { ConfigService } from './common/services/config.service';
+import { otelSDK } from './tracing';
 
 dotenv.config();
 
 async function bootstrap() {
+  await otelSDK.start();
   const app = await NestFactory.create(AppModule, { cors: true });
   const configService = app.get(ConfigService);
 

@@ -2,7 +2,7 @@ import { Controller, Get, Ip } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import * as ipaddr from 'ipaddr.js';
 
-@ApiTags('Elasticsearch Root')
+@ApiTags('API Root')
 @Controller()
 export class AppController {
   @Get()

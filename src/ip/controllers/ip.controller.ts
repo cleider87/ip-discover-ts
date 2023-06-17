@@ -30,7 +30,6 @@ export class Ipv4Controller {
     const realIP = ipaddr.process(ip || ipAddress).toString();
     const add = ipaddr.parse(realIP);
 
-    console.log(realIP);
     if (add.kind() === 'ipv4') {
       const asn = await this.ipv4Service.findASN(realIP);
       const city = await this.ipv4Service.findCity(realIP);
