@@ -23,6 +23,7 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: administrator
+      POSTGRES_DB: ip-discovery
     expose:
       - "5432"
     ports:
