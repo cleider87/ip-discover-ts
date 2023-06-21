@@ -88,5 +88,14 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "pnpm": {
+    "overrides": {
+      "axios@<0.21.1": ">=0.21.1",
+      "follow-redirects@<1.14.8": ">=1.14.8",
+      "follow-redirects@<1.14.7": ">=1.14.7",
+      "@nestjs/core@<9.0.5": ">=9.0.5",
+      "axios@<0.21.2": ">=0.21.2"
+    }
   }
 }
